@@ -1,0 +1,108 @@
+// app global css in SCSS form
+// breakpoint variable, from https://quasar.dev/style/breakpoints
+// Except the xs one because I think 600px is too small
+$xs-breakpoint: 0px;
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$xxl-breakpoint: 1400px;
+
+.container-form {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 540px;
+}
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// @media (min-width: $xs-breakpoint) {
+//   .container,
+//   .container-sm {
+//     max-width: 540px;
+//   }
+// }
+
+@media (min-width: $sm-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: $md-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: $lg-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: $xl-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: $xxl-breakpoint) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1320px;
+  }
+}
+
+// Override defaults
+body {
+  background: white;
+}
+
+// Helpers
+.cursor-move {
+  cursor: move;
+}
+
+.c-bg-grey-1 {
+  background: $blue-grey-1;
+}
+
+.c-column {
+  min-height: 80vh;
+  // max-width: 95vw;
+  // width: 450px;
+  // flex: 0 0 33.333333%;
+}
+
+// Dynamic classes
+.moving-card {
+  opacity: 0.5;
+  background: $blue-grey-1;
+  border: 1px solid $blue-5;
+}
